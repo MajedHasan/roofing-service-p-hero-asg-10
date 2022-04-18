@@ -1,0 +1,35 @@
+.home-page-banner {
+    background: url(../../../images/banner-img.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.home-page-banner .bg-color {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.home-page-banner .bg-color .content {
+    padding: 15% 0;
+    width: 100%;
+    min-height: 50vh;
+    height: 100%;
+}
+
+.home-page-banner .bg-color .content h2 {
+    color: #FFFFFF;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.home-page-banner .bg-color .content h2 span {
+    color: #01adff;
+    font-weight: bold;
+}
+
+.home-page-banner .bg-color .content p {
+    max-width: 450px;
+    width: 100%;
+    margin: 25px 0;
+    color: #F1F1F1;
+}
