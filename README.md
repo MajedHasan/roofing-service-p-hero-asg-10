@@ -8,7 +8,7 @@ Live Website link [Live Website link](https://github.com/facebook/create-react-a
 
 
 ### Technologies I Used
-*React Firebase Hook
-*React Bootstrap
-*React Toastify
-*React 
+* React Firebase Hook
+* React Bootstrap
+* React Toastify
+* React Font Awesome
