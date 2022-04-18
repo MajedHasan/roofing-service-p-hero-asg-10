@@ -39,8 +39,8 @@ const Header = () => {
                             {
                                 user ?
                                     <li className="nav-item d-flex">
-                                        <span> ${user?.displayName} </span>
-                                        <button onClick={handleLogout} className="btn btn-link text-white">Log Out</button>
+                                        <span className='text-white' style={{ display: "block", marginTop: "9px" }}> {user.displayName} </span>
+                                        <button onClick={handleLogout} className="btn btn-link text-danger ms-3" >Log Out</button>
                                     </li>
                                     :
                                     < li className="nav-item d-flex">

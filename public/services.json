@@ -1,44 +1,44 @@
 [
     {
         "id": "1",
-        "name": "",
+        "name": "Residential Foam Roofs",
         "desc": "",
-        "price": "",
+        "price": 250,
         "img": "./images/services/img-1.jpg"
     },
     {
         "id": "2",
-        "name": "",
+        "name": "Drainage Systems",
         "desc": "",
-        "price": "",
+        "price": 300,
         "img": "./images/services/img-2.jpg"
     },
     {
         "id": "3",
-        "name": "",
+        "name": "Other Roofing Systems",
         "desc": "",
-        "price": "",
+        "price": 225,
         "img": "./images/services/img-3.jpg"
     },
     {
         "id": "4",
-        "name": "",
+        "name": "Skylights",
         "desc": "",
-        "price": "",
+        "price": 330,
         "img": "./images/services/img-4.jpg"
     },
     {
         "id": "5",
-        "name": "",
+        "name": "Recoating & Restoration",
         "desc": "",
-        "price": "",
+        "price": 550,
         "img": "./images/services/img-5.jpg"
     },
     {
         "id": "6",
-        "name": "",
+        "name": "Eichler Beam Repairs",
         "desc": "",
-        "price": "",
+        "price": 120,
         "img": "./images/services/img-6.jpg"
     }
 ]

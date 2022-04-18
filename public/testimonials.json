@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Fouad elimrani:",
+        "img": "./images/testimonial-img/testimonial-1.jpg",
+        "text": "Le plombier si Hamid driyaf bazaf w khdamtou zwina w le site en general mezyan"
+    },
+    {
+        "id": 2,
+        "name": "Youssef Jedla:",
+        "img": "./images/testimonial-img/testimonial-2.jpg",
+        "text": "Je viens de découvrir le site il est exelent w le service est bon"
+    },
+    {
+        "id": 3,
+        "name": "Souad Rahibi:",
+        "img": "./images/testimonial-img/testimonial-3.jpg",
+        "text": "Exelente idée kona ma7tajine b7al had le site dans notre pays"
+    }
+]

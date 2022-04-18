@@ -1,9 +1,63 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+
+    const emailRef = useRef('')
+    const passwordRef = useRef('')
+    const navigate = useNavigate()
+
+    const location = useLocation()
+    let from = location?.state?.from?.pathname || '/'
+    const [signInWithEmailAndPassword, user2, loading2, error2] = useSignInWithEmailAndPassword(auth)
+    let errorElement;
+
+    if (error2) {
+        errorElement = <p className="text-danger">Error: {error2?.message} </p>
+    }
+
+    if (user2) {
+        navigate(from, { replace: true })
+    }
+
+    const handleSubmit = event => {
+        event.preventDefault()
+        const email = emailRef.current.value
+        const password = passwordRef.current.value
+
+        signInWithEmailAndPassword(email, password)
+    }
+
+    const [sendPasswordResetEmail, sending, error3] = useSendPasswordResetEmail(auth)
+
+    if (loading2 || sending) {
+        return <Loading></Loading>
+    }
+
+    const navigateRegister = () => {
+        navigate('/register')
+    }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value
+        if (email) {
+            await sendPasswordResetEmail(email)
+            toast('send email')
+        }
+        else {
+            toast('Please enter yoru email address')
+        }
+    }
+
     return (
-        <div>
+        <div className='container mx-auto w-50 mt-5'>
             <h2 className='text-center text-info mt-2'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -17,6 +71,7 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
+            {errorElement}
             <p className="text-center">New to genius car? <span className='text-info' style={{ cursor: "pointer" }} onClick={navigateRegister}>Register Now </span></p>
             <p className="text-center">Forget Your Password? <span className='text-primary' style={{ cursor: "pointer" }} onClick={resetPassword}>Reset Now </span></p>
             <SocialLogin></SocialLogin>
