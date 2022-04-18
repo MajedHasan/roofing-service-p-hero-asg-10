@@ -27,42 +27,42 @@ const Checkout = () => {
         {
             id: 1,
             name: "Residential Foam Roofs",
-            desc: "",
+            desc: "Residential Foam Roofs is for only Residential Foam",
             price: 250,
             img: image1
         },
         {
             id: 2,
             name: "Drainage Systems",
-            desc: "",
+            desc: "Drainage Systems is a high quality service for you from me",
             price: 300,
             img: image2
         },
         {
             id: 3,
             name: "Other Roofing Systems",
-            desc: "",
+            desc: "I can provide others roofing service if you need",
             price: 225,
             img: image3
         },
         {
             id: 4,
             name: "Skylights",
-            desc: "",
+            desc: "SkyLights roofing service i can provide. if you need then please buy this service",
             price: 330,
             img: image4
         },
         {
             id: 5,
             name: "Recoating & Restoration",
-            desc: "",
+            desc: "Recoating & Restoration is another service i am providing",
             price: 550,
             img: image5
         },
         {
             id: 6,
             name: "Eichler Beam Repairs",
-            desc: "",
+            desc: "Eichler Beam Repairs is very low cost for me. I am providing it very low cost",
             price: 120,
             img: image6
         }

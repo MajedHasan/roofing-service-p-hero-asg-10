@@ -45,7 +45,7 @@ const Header = () => {
                                     :
                                     < li className="nav-item d-flex">
                                         <Link className="nav-link" to="/login">Login</Link>
-                                        <Link className="nav-link" to="/register">Register</Link>
+                                        <Link className="nav-link ms-3" to="/register">Register</Link>
                                     </li>
 
                             }
