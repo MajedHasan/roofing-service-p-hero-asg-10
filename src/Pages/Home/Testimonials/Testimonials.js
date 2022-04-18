@@ -8,7 +8,9 @@ const Testimonials = () => {
     useEffect(() => {
         fetch('testimonials.json')
             .then(res => res.json())
-            .then(data => setTestimonials(data))
+            .then(data => {
+                setTestimonials(data)
+            })
     }, [])
 
     return (

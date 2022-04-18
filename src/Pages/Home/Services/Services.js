@@ -9,10 +9,7 @@ const Services = () => {
     useEffect(() => {
         fetch('services.json')
             .then(res => res.json())
-            .then(data => {
-                setServices(data)
-                console.log(data);
-            })
+            .then(data => setServices(data))
     }, [])
 
     const navigate = useNavigate()
