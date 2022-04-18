@@ -84,15 +84,15 @@ const Checkout = () => {
                             <img src={service.img} alt="" className='w-100 mb-3' />
                             <h2 className='text-info'>Name: {service.name}</h2>
                             <p>Description: {service.desc}</p>
-                            <h3>Price: {service.price}</h3>
+                            <h3>Price: ${service.price}</h3>
                         </div>
                     </div>
                     <div className="col-md-6 col-12 p-3">
                         <div className="box shadow-lg rounded p-3">
                             <h2 className='text-center'>Checkout</h2>
-                            <p>Tax: {service.price * .05}</p>
-                            <p>Price: {service.price}</p>
-                            <p>Total Price: {service.price + (service.price * .05)}</p>
+                            <p>Tax: ${service.price * .05}</p>
+                            <p>Price: ${service.price}</p>
+                            <p>Total Price: ${service.price + (service.price * .05)}</p>
                             <button className='btn btn-warning text-white w-100'>Pay Now</button>
                         </div>
                     </div>

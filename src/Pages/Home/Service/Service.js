@@ -14,7 +14,7 @@ const Service = (props) => {
                     <p className='desc'>
                         {desc}
                     </p>
-                    <h2 className='price'>{price}</h2>
+                    <h2 className='price'>${price}</h2>
                 </div>
                 <button className="btn btn-warning mx-auto d-block text-white" onClick={() => handleCheckout(id)}>Checkout</button>
             </div>
