@@ -19,7 +19,7 @@ const Services = () => {
     }
 
     return (
-        <section className="service-section my-5 py-3">
+        <section className="service-section my-5 py-3" id='services'>
             <div className="container">
                 <h2 className='text-center mb-5'>My Services</h2>
                 <div className="service-wrapper row g-5 align-items-stretch">
