@@ -49,14 +49,14 @@ const Register = () => {
             <h2 className='text-center text-info mt-2'>Please Register</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="text" name="name" placeholder="Enter Your Name" />
+                    <Form.Control type="text" name="name" placeholder="Enter Your Name" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" name="email" placeholder="Enter email" />
+                    <Form.Control type="email" name="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control type="password" name="password" placeholder="Password" />
+                    <Form.Control type="password" name="password" placeholder="Password" required />
                 </Form.Group>
                 <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
                     Register
