@@ -9,6 +9,7 @@ import Checkout from './Pages/Checkout/Checkout';
 import Blogs from './Pages/Blogs/Blogs';
 import About from './Pages/About/About';
 import Header from './Pages/Shared/Header/Header';
+import Footer from './Pages/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </>
   );
 }
