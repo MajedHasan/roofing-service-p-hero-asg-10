@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './Header.css';
 
@@ -11,6 +11,19 @@ const Header = () => {
 
     const handleLogout = () => {
         signOut(auth)
+    }
+
+    function CustomLink({ children, to, ...props }) {
+        let resolved = useResolvedPath(to);
+        let match = useMatch({ path: resolved.pathname, end: true });
+        return (
+            <Link
+                style={{ color: match ? "#FFFFFF" : "#DDDDDD", fontWeight: match ? "bold" : "normal" }}
+                to={to}
+                {...props}>
+                {children}
+            </Link>
+        )
     }
 
 
@@ -27,13 +40,13 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <Link className="nav-link active" to="/home">Home</Link>
+                                <CustomLink className="nav-link active" to="/home">Home</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <Link as={Link} className="nav-link" to="/about">About</Link>
+                                <CustomLink as={Link} className="nav-link" to="/about">About</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <Link as={Link} className="nav-link" to="/blogs">Blogs</Link>
+                                <CustomLink as={Link} className="nav-link" to="/blogs">Blogs</CustomLink>
                             </li>
 
                             {
@@ -44,8 +57,8 @@ const Header = () => {
                                     </li>
                                     :
                                     < li className="nav-item d-flex">
-                                        <Link className="nav-link" to="/login">Login</Link>
-                                        <Link className="nav-link ms-3" to="/register">Register</Link>
+                                        <CustomLink className="nav-link" to="/login">Login</CustomLink>
+                                        <CustomLink className="nav-link ms-3" to="/register">Register</CustomLink>
                                     </li>
 
                             }
